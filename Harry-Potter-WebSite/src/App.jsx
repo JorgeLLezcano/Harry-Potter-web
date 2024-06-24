@@ -1,6 +1,9 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import MouseFollower from './MouseFollower'
+import Card from './Card';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Character from './Character';
 
 const MAGICAPI = 'https://hp-api.onrender.com/api/characters';
 
@@ -22,30 +25,14 @@ function App() {
 
   return (
     <>
-      <header>
-          
-          <MouseFollower/>
-        </header>
-       
-      <div className='conteiner'>
-     
-    
-        {characters.map((character) => {
-          return (
-            <div key={character.id} className='card'>
-              <h1>{character.name}</h1>
-              {character.image && <img src={character.image} alt={character.name} />}
-              <div className='character-data'>
-              <p
-              style={
-{backgroundColor: character.house === 'Gryffindor' ? 'red' : character.house === 'Hufflepuff' ? 'yellow' : character.house === 'Ravenclaw' ? 'blue' : 'green'}
-              }>{character.house}</p>
-             <p>{character.alternate_names[0]}</p>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+    <BrowserRouter>
+        <MouseFollower/>
+        <Routes>
+           <Route path="/" element={<Card characters={characters} />} />
+          <Route path="/character/:id" element={<Character  characters={characters}/>} />
+        </Routes>
+       {/* <Card characters={characters} /> */}
+       </BrowserRouter>
     </>
   );
 }

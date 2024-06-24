@@ -30,37 +30,43 @@
 .card{
   position: relative;
   display: inline-block;
-  mask-image: linear-gradient(transparent, black 49%, transparent);
+  mask-image: linear-gradient(transparent, black 80%, transparent);
+  transition: opacity 2s ease;
 }
 
 .card img{
-  height: auto;
+  height: 100%;
   width: 100%;
-  mask-image: linear-gradient(transparent, black 49%, transparent);
+  mask-image: linear-gradient(transparent, black 49%);
   display: block;
+
 }
+
+
 
 .card h1{
   background: transparent;
-  top: -30px;
   z-index: 1;
   /* position: absolute; */
-  color: white;
-  mask-image: linear-gradient(transparent,black 80%, transparent);
+  color: black;
+  /* mask-image: linear-gradient(black 80%, transparent); */
 }
 .card .character-data p {
   margin: 5px 0;
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0 100%, 0 51%, 0 0);
 }
 
 .card .character-data {
   position: absolute;
   bottom: 10px;
   left: 50%;
+  width: 100%;
   transform: translateX(-50%);
   text-align: center;
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   z-index: 2;
+  background-color: transparent;
 }
 
 .lumus{
@@ -84,4 +90,49 @@
   100%{
     transform: scale(1);
   }
+}
+.back{
+  opacity: 0;
+  transition: opacity 2s ease
+}
+.front{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  transition: opacity 2s ease;
+  background-color: black;
+}
+.front h1{
+  color: white;
+  background-color: black;
+}
+
+.card:hover .front{
+  opacity: 0;
+  filter: blur(3px);
+}
+
+.card:hover .back{
+  opacity: 1;
+  animation: lumus-max .2 ease infinite;
+}
+
+@keyframes lumus-max{
+  0%{
+    mask-image: linear-gradient(transparent, black 49%);
+  }
+  50%{
+    mask-image: linear-gradient(transparent, black 90%);
+  }
+  100%{
+    mask-image: linear-gradient(transparent, black 49%);
+  }
+}
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.5s;
 }
