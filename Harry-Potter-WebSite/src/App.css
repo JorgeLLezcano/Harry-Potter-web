@@ -1,3 +1,8 @@
+@view-transition {
+  navigation: auto; /* enabled! */
+}
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -134,5 +139,5 @@
 }
 ::view-transition-old(root),
 ::view-transition-new(root) {
-  animation-duration: 0.5s;
+  animation-duration: 5.5s;
 }

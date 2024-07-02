@@ -1,0 +1,23 @@
+.tarjeta-character{
+    display: flex;
+    columns: 2;
+
+}
+
+.tarjeta-character p{
+color:  white;
+}
+
+.tarjeta-character h1{
+    color: white;
+}
+
+
+
+.bandera{
+    clip-path: polygon(0 0, 0 50%, 0 100%, 50% 70%, 100% 100%, 100% 49%, 100% 0);
+}
+
+.bandera p{
+    color: black;
+}
