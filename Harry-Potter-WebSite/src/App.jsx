@@ -31,7 +31,7 @@ function App() {
            <Route path="/" element={<Card characters={characters} />} />
           <Route path="/character/:id" element={<Character  characters={characters}/>} />
         </Routes>
-       {/* <Card characters={characters} /> */}
+      
        </BrowserRouter>
     </>
   );

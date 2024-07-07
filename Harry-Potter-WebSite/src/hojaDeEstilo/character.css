@@ -1,9 +1,12 @@
 .tarjeta-character{
     display: flex;
     columns: 2;
-
+    gap:10px;
+    height: 300px;
 }
-
+header h1{
+    color: white;
+}
 .tarjeta-character p{
 color:  white;
 }
@@ -12,12 +15,35 @@ color:  white;
     color: white;
 }
 
-
-
+.character-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    
+}
+.character-name img{
+    height: 100%;
+    width:100%;
+}
+.character-name h1{
+    position:absolute;
+    top:0px;
+}
 .bandera{
     clip-path: polygon(0 0, 0 50%, 0 100%, 50% 70%, 100% 100%, 100% 49%, 100% 0);
+    overflow:hiden;
 }
 
 .bandera p{
     color: black;
+}
+
+.meta-data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid white;
+    padding:10px;
 }

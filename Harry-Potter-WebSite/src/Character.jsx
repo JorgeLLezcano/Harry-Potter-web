@@ -10,9 +10,14 @@ export default function Character({ characters }) {
   }
 
   return (
+    <>
+    <header>
+     <h1>{character.name}</h1>
+     </header>
     <div className="tarjeta-character">
-      <div>
-      <h1>{character.name}</h1>
+     
+      <div  className="character-name">
+      
       <img src={character.image} alt={character.name} />
       </div>
       <div className="bandera"
@@ -32,10 +37,12 @@ export default function Character({ characters }) {
           'black' : character.house === 'Ravenclaw' ?
             'brown' : 'grey',
 
-            color: character.house==='Hufflepuf'? "black":"white"
+            color: character.house==='Hufflepuff'? "white":"black"
           }
           }
       >House: {character.house}</p>
+
+      <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2h60uXMBgK-JDhmig-BrEteswtC0rMl1nlg&s'/>
       </div>
       <div className="meta-data">
       <p>Alternate Names: {character.alternate_names.join(', ')}</p>
@@ -43,5 +50,6 @@ export default function Character({ characters }) {
       </div>
      <Link to={'/'}> Back </Link>
     </div>
+    </>
   );
 }
