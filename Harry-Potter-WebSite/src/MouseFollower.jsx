@@ -28,7 +28,8 @@ const MouseFollower = () => {
     transform: 'translate(-50%, -50%)', // Center the div at the mouse position
     //pointerEvents: 'none' ,// Make sure the div does not interfere with mouse events
     // position:'fixed',
-    filter: 'blur(5px)'
+    filter: 'blur(5px)',
+    pointerEvents: 'none' 
   };
 
   return (
