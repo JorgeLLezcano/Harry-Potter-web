@@ -1,6 +1,9 @@
-@view-transition {
-  navigation: auto; /* enabled! */
-}
+@import url('h//db.onlinewebfonts.com/c/0421d4186d6efbfc5331fe180895e780?family=Harry+Potter');
+
+
+/* @view-transition {
+  navigation: auto;
+} */
 
 
 #root {
@@ -9,16 +12,20 @@
   padding: 2rem;
   text-align: center;
   background-color: #333; 
+  font-family: Harry Potter, Arial;
 }
 *{
   background-color: #333; 
 }
-
+body{
+  font-family: Harry Potter, Arial;
+}
 .conteiner{
   display: grid;
   grid-template-columns: 300px 300px 300px;
   /* grid-template-rows: 200px; */
   gap: 10px;
+  font-family: Harry Potter, Arial;
 }
 
 /* .card{ 
@@ -37,6 +44,7 @@
   display: inline-block;
   mask-image: linear-gradient(transparent, black 80%, transparent);
   transition: opacity 2s ease;
+  font-family: Harry Potter, Arial;
 }
 
 .card img{
@@ -54,6 +62,7 @@
   z-index: 1;
   /* position: absolute; */
   color: black;
+  font-family: Harry Potter, Arial;
   /* mask-image: linear-gradient(black 80%, transparent); */
 }
 .card .character-data p {
@@ -75,25 +84,51 @@
 }
 
 .lumus{
+  height:10px;
+  width: 10px;
+  background-color: white;
+  border-radius: 50%;
+  position:fixed;
+  filter: blur(2px);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  /* animation: latencia 2s infinite; */
+}
+.lumus::after{
+  content: "";
   height: 50px;
   width: 50px;
   background-color: white;
   border-radius: 50%;
-  position:fixed;
   filter: blur(5px);
-   animation: latencia 2s infinite;
+   animation: latencia-opacity 2s linear infinite;
+   position: absolute;
 }
-
-
 @keyframes latencia{
   0%{
     transform: scale(1);
   }
   50%{
-    transform: scale(4);
+    transform: scale(2);
   }
   100%{
     transform: scale(1);
+  }
+}
+
+@keyframes latencia-opacity{
+    0%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  50%{
+    transform: scale(2);
+    opacity: 0.5;
+  }
+  100%{
+    transform: scale(5);
+    opacity: 0;
   }
 }
 .back{
@@ -110,10 +145,12 @@
   justify-items: center;
   transition: opacity 2s ease;
   background-color: black;
+  font-family: Harry Potter, Arial;
 }
 .front h1{
   color: white;
   background-color: black;
+  font-family: Harry Potter, Arial;
 }
 
 .card:hover .front{

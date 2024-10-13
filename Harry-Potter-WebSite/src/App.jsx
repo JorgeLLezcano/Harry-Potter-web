@@ -4,8 +4,8 @@ import MouseFollower from './MouseFollower'
 import Card from './Card';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Character from './Character';
+import {MAGICAPI} from './services/const'
 
-const MAGICAPI = 'https://hp-api.onrender.com/api/characters';
 
 function App() {
   const [characters, setCharacters] = useState([]);

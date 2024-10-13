@@ -16,10 +16,7 @@ export default function Character({ characters }) {
      </header>
     <div className="tarjeta-character">
      
-      <div  className="character-name">
-      
-      <img src={character.image} alt={character.name} />
-      </div>
+     
       <div className="bandera"
       style={
         {   
@@ -40,9 +37,11 @@ export default function Character({ characters }) {
             color: character.house==='Hufflepuff'? "white":"black"
           }
           }
-      >House: {character.house}</p>
-
-      <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2h60uXMBgK-JDhmig-BrEteswtC0rMl1nlg&s'/>
+      > {character.house}</p>
+      </div>
+      <div  className="character-name">
+      
+      <img src={character.image} alt={character.name} />
       </div>
       <div className="meta-data">
       <p>Alternate Names: {character.alternate_names.join(', ')}</p>
