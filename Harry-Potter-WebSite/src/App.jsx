@@ -5,6 +5,8 @@ import Card from './Card';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Character from './Character';
 
+
+
 const MAGICAPI = 'https://hp-api.onrender.com/api/characters';
 
 function App() {
@@ -30,6 +32,7 @@ function App() {
         <Routes>
            <Route path="/" element={<Card characters={characters} />} />
           <Route path="/character/:id" element={<Character  characters={characters}/>} />
+      
         </Routes>
       
        </BrowserRouter>

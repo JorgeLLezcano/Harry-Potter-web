@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 export default function Card({characters}){
     return(
         <div className='conteiner'>
+           {/* <Link to={'/notFound'}>not found</Link> */}
+
         {characters.map((character, index) => {
             return (
                 <Link to={`/character/${index}`} key={character.id}>
@@ -31,6 +33,7 @@ export default function Card({characters}){
                 </div>
               </div>
           </Link>
+     
             );
           })}
           </div>

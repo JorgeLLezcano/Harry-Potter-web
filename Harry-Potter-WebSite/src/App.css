@@ -4,9 +4,9 @@
 
 
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
   background-color: #333; 
 }
@@ -44,8 +44,15 @@
   width: 100%;
   mask-image: linear-gradient(transparent, black 49%);
   display: block;
-
+  transform: translateY(300px) scale(0);
+  transition: transform .5s ease;
 }
+
+.card:hover img{
+  transform: translateY(0) scale(1);
+}
+
+
 
 
 
