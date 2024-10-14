@@ -16,10 +16,7 @@ export default function Character({ characters }) {
      </header>
     <div className="tarjeta-character">
      
-      <div  className="character-name">
-      
-      <img src={character.image} alt={character.name} />
-      </div>
+     
       <div className="bandera"
       style={
         {   
@@ -40,11 +37,13 @@ export default function Character({ characters }) {
             color: character.house==='Hufflepuff'? "white":"black"
           }
           }
-      >House: {character.house}</p>
 
-      <img src={character.house==='Gryffindor'? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2h60uXMBgK-JDhmig-BrEteswtC0rMl1nlg&s':
-      character.house === 'Hufflepuff'?'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwallhere.com%2Fes%2Fwallpaper%2F2161209&psig=AOvVaw1Q831Enqs37QwuOcF0kkCV&ust=1728770830106000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMCesq2rh4kDFQAAAAAdAAAAABAE':''}/>
+      > {character.house}</p>
       </div>
+      <div  className="character-name">
+      
+      <img src={character.image} alt={character.name} />
+    </div>
       <div className="meta-data">
       <p>Alternate Names: {character.alternate_names.join(', ')}</p>
       <p>Ancestry: {character.ancestry}</p>

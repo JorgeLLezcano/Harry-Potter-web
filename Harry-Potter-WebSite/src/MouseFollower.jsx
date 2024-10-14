@@ -29,7 +29,9 @@ const MouseFollower = () => {
     //pointerEvents: 'none' ,// Make sure the div does not interfere with mouse events
     // position:'fixed',
     filter: 'blur(5px)',
+
     pointerEvents: 'none' 
+
   };
 
   return (

@@ -1,18 +1,24 @@
+@import url('h//db.onlinewebfonts.com/c/0421d4186d6efbfc5331fe180895e780?family=Harry+Potter');
+
 .tarjeta-character{
     display: flex;
     columns: 2;
     gap:10px;
     height: 300px;
+    font-family: Harry Potter, Arial;
 }
 header h1{
     color: white;
+    font-family: Harry Potter, Arial;
 }
 .tarjeta-character p{
 color:  white;
+font-family: Harry Potter, Arial;
 }
 
 .tarjeta-character h1{
     color: white;
+    font-family: Harry Potter, Arial;
 }
 
 .character-name{
@@ -38,7 +44,10 @@ color:  white;
 .bandera p{
     color: black;
 }
-
+.bandera img{
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+}
 .meta-data{
     display: flex;
     justify-content: center;
@@ -47,3 +56,4 @@ color:  white;
     border: solid white;
     padding:10px;
 }
+
