@@ -26,19 +26,42 @@ font-family: Harry Potter, Arial;
     justify-content: center;
     align-items: center;
     position:relative;
+    transition: all 1s ease;
+    overflow: hidden;
+     border-radius: 10px;
     
 }
 .character-name img{
     height: 100%;
     width:100%;
+    transition: all 1s ease;
+   
+}
+.character-name img:hover{
+    transform: scale(1.1) skewY(4deg);
 }
 .character-name h1{
     position:absolute;
     top:0px;
 }
+
 .bandera{
     clip-path: polygon(0 0, 0 50%, 0 100%, 50% 70%, 100% 100%, 100% 49%, 100% 0);
     overflow:hiden;
+    transition: all 1s ease;
+}
+.bandera::after{
+    content: '';
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    
+    background-color: white;
+}
+.bandera:hover{
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    transform: skewX(4deg);
 }
 
 .bandera p{
