@@ -3,9 +3,11 @@
 .tarjeta-character{
     display: flex;
     columns: 2;
-    gap:10px;
+    gap: 10px;
     height: 300px;
     font-family: Harry Potter, Arial;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 header h1{
     color: white;
