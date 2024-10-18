@@ -100,4 +100,13 @@ font-family: Harry Potter, Arial;
     border: solid white;
     padding:10px;
 }
-
+.btn-back a{  
+ background-color: white;
+}
+.btn-back {
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 20px;
+}

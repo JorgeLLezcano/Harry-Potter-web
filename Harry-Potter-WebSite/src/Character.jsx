@@ -10,10 +10,15 @@ export default function Character({ characters }) {
   }
 
   return (
+
     <>
+    <button className="btn-back">
+        <Link to={'/'}> Back </Link>
+     </button>
     <header>
      <h1>{character.name}</h1>
      </header>
+     
     <div className="tarjeta-character">
      
      
@@ -48,7 +53,7 @@ export default function Character({ characters }) {
       <p>Alternate Names: {character.alternate_names.join(', ')}</p>
       <p>Ancestry: {character.ancestry}</p>
       </div>
-     <Link to={'/'}> Back </Link>
+     
     </div>
     </>
   );
