@@ -11,7 +11,30 @@ export default function Character({ characters }) {
 
   return (
 
-    <>
+    <main>
+           <div className="bandera"
+            style={
+              {   
+                backgroundColor: character.house === 'Gryffindor' ?
+                'red' : character.house === 'Hufflepuff' ?
+                'yellow' : character.house === 'Ravenclaw' ?
+                  'blue' : 'green'
+                }
+                }>
+            <p
+            style={
+              {   
+                backgroundColor: character.house === 'Gryffindor' ?
+                'yellow' : character.house === 'Hufflepuff' ?
+                'black' : character.house === 'Ravenclaw' ?
+                  'brown' : 'grey',
+
+                  color: character.house==='Hufflepuff'? "white":"black"
+                }
+                }
+
+            > {character.house}</p>
+      </div>
     <button className="btn-back">
         <Link to={'/'}> Back </Link>
      </button>
@@ -22,39 +45,25 @@ export default function Character({ characters }) {
     <div className="tarjeta-character">
      
      
-      <div className="bandera"
-      style={
-        {   
-          backgroundColor: character.house === 'Gryffindor' ?
-          'red' : character.house === 'Hufflepuff' ?
-          'yellow' : character.house === 'Ravenclaw' ?
-            'blue' : 'green'
-          }
-          }>
-      <p
-      style={
-        {   
-          backgroundColor: character.house === 'Gryffindor' ?
-          'yellow' : character.house === 'Hufflepuff' ?
-          'black' : character.house === 'Ravenclaw' ?
-            'brown' : 'grey',
+ 
 
-            color: character.house==='Hufflepuff'? "white":"black"
-          }
-          }
 
-      > {character.house}</p>
-      </div>
-      <div  className="character-name">
-      
-      <img src={character.image} alt={character.name} />
-    </div>
-      <div className="meta-data">
-      <p>Alternate Names: {character.alternate_names.join(', ')}</p>
-      <p>Ancestry: {character.ancestry}</p>
-      </div>
-     
-    </div>
-    </>
+            <div  className="character-name">
+                <img src={character.image} alt={character.name} />
+            </div>
+
+
+                <div className="meta-data">
+                    <p>Alternate Names: {character.alternate_names.join(', ')}</p>
+                    <p>Ancestry: {character.ancestry}</p>
+                    <p>date Of Birth: {character.dateOfBirth}</p>
+                    <p>Eye Colour: {character.eyeColour}</p>
+                    <p>Gender: {character.gender}</p>
+                    <p>Hair Colour: {character.hairColour}</p>
+                    <p>wizard: {character.wizard}</p>
+                
+                </div>
+     </div>
+    </main>
   );
 }

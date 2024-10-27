@@ -5,6 +5,7 @@ import Card from './Card';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Character from './Character';
 import {MAGICAPI} from './services/const'
+import chargerts from './Chargerts';
 
 
 
@@ -18,6 +19,7 @@ function App() {
     const response = await fetch(MAGICAPI);
     const data = await response.json();
     setCharacters(data);
+    console.log(characters)
   };
 
   // Llama a getCharacters cuando el componente se monta
@@ -33,7 +35,7 @@ function App() {
         <Routes>
            <Route path="/" element={<Card characters={characters} />} />
           <Route path="/character/:id" element={<Character  characters={characters}/>} />
-      
+      <Route path='/chargerts'  element={<chargerts/>}/>
         </Routes>
       
        </BrowserRouter>

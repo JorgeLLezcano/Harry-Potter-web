@@ -1,11 +1,19 @@
 
 import { Link } from "react-router-dom";
+import chargerts from "./Chargerts.jsx";
+import './hojaDeEstilo/character.css'
 
 
 export default function Card({characters}){
+
+  if(characters.length === 0){
+    return <chargerts/>
+  }
     return(
         <div className='conteiner'>
-           {/* <Link to={'/notFound'}>not found</Link> */}
+           {/* <button>
+            <Link to={'/chargerts'}> Character </Link>
+           </button> */}
 
         {characters.map((character, index) => {
             return (

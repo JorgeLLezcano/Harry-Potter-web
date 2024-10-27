@@ -1,0 +1,22 @@
+body{
+    background:grey ;
+  }
+  
+  circle, polygon, g, line {
+    fill-opacity:0;
+    stroke-dasharray:1300;
+    stroke-dashoffset:1300;
+    animation: desfum 5s linear infinite;
+  }
+  @keyframes desfum{
+    0%{
+      fill-opacity:0;
+      
+    }
+  
+    100%{
+        fill-opacity:100%;
+        stroke-dashoffset:0;
+        stroke-width:10
+    }
+  }

@@ -1,5 +1,11 @@
 @import url('h//db.onlinewebfonts.com/c/0421d4186d6efbfc5331fe180895e780?family=Harry+Potter');
-
+main{
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vh;
+}
 .tarjeta-character{
     display: flex;
     columns: 2;
@@ -10,8 +16,10 @@
     justify-content: center;
 }
 header h1{
+    display: flex;
     color: white;
     font-family: Harry Potter, Arial;
+    justify-content: center;
 }
 .tarjeta-character p{
 color:  white;
@@ -32,15 +40,35 @@ font-family: Harry Potter, Arial;
     overflow: hidden;
      border-radius: 10px;
     
+    
 }
 .character-name img{
     height: 100%;
     width:100%;
     transition: all 1s ease;
+    animation: move 10s linear infinite;
+    border-image: fill 0 linear-gradient(#0001, #000);
    
 }
 .character-name img:hover{
     transform: scale(1.1) skewY(4deg);
+}
+@keyframes move {
+    0% {
+        transform: rotateY(-20deg) rotateX(-5deg);
+    }
+    25% {
+        transform: rotateY(20deg) rotateX(-5deg);
+    }
+    50% {
+        transform: rotateY(20deg) rotateX(5deg);
+    }
+    75% {
+        transform: rotateY(-20deg) rotateX(5deg);
+    }
+    100% {
+        transform: rotateY(-20deg) rotateX(-5deg);
+    }
 }
 .character-name h1{
     position:absolute;
@@ -52,6 +80,7 @@ font-family: Harry Potter, Arial;
     overflow:hiden;
     transition: all 1s ease;
     position:relative;
+    height: 100vh;
 }
 .bandera::after, .bandera::before{
     content: "";
@@ -98,11 +127,11 @@ font-family: Harry Potter, Arial;
     align-items: center;
     flex-direction: column;
     border: solid white;
-    padding:10px;
+    padding:5px;
 }
-.btn-back a{  
+/* .btn-back a{  
  background-color: white;
-}
+} */
 .btn-back {
     height: 50px;
     position: absolute;

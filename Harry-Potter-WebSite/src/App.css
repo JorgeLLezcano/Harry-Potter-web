@@ -6,20 +6,19 @@
 } */
 
 
-#root {
+/* #root { */
   /* max-width: 1280px; */
-  margin: 0 auto;
+ 
   /* padding: 2rem; */
-  text-align: center;
+  /* text-align: center;
   background-color: #333; 
   font-family: Harry Potter, Arial;
+  margin: 0 auto;
 }
 *{
   background-color: #333; 
-}
-body{
-  font-family: Harry Potter, Arial;
-}
+} */
+
 .conteiner{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
