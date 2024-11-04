@@ -10,8 +10,9 @@ export default function Character({ characters }) {
   }
 
   return (
-
-    <main>
+<conteiner>
+    <main style={{ backgroundImage: `url(${character.image} )` ,
+    }}>
            <div className="bandera"
             style={
               {   
@@ -51,7 +52,7 @@ export default function Character({ characters }) {
             <div  className="character-name">
                 <img src={character.image} alt={character.name} />
             </div>
-
+            </div>
 
                 <div className="meta-data">
                     <p>Alternate Names: {character.alternate_names.join(', ')}</p>
@@ -63,7 +64,8 @@ export default function Character({ characters }) {
                     <p>wizard: {character.wizard}</p>
                 
                 </div>
-     </div>
+     
     </main>
+    </conteiner>
   );
 }

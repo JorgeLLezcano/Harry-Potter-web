@@ -1,4 +1,14 @@
-@import url('h//db.onlinewebfonts.com/c/0421d4186d6efbfc5331fe180895e780?family=Harry+Potter');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maqueta hp</title>
+    <style>
+        @import url('h//db.onlinewebfonts.com/c/0421d4186d6efbfc5331fe180895e780?family=Harry+Potter');
+body{
+  background-color: #333;
+}
 conteiner{
     display: flex;
     align-items: center;
@@ -9,32 +19,20 @@ conteiner{
 }
 
 main{
-    
-    /* display: grid;
-    grid-template-columns: 100px 250px 250px;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 8px;
-    flex-wrap: wrap;
-    height: 100vh;
-    overflow: hidden;
-    background-position: center;
-    background-color: rgba(0, 0, 0, 0.5); 
-    background-blend-mode: overlay;  */
-
+    background-image: url('https://ik.imagekit.io/hpapi/cedric.png');
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 15px;
     display: grid;
      grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 8px;
     flex-wrap: wrap;
+    
     overflow: hidden;
     background-position: center;
-    background-color: rgb(7 0 0 / 76%);
-    background-blend-mode: overlay;
-    background-size: cover;
-    padding: 5px;
-
-
+    background-color: rgba(0, 0, 0, 0.5); 
+    background-blend-mode: overlay; 
 }
 .tarjeta-character{
     display: flex;
@@ -68,9 +66,19 @@ font-family: Harry Potter, Arial;
     position:relative;
     transition: all 1s ease;
     overflow: hidden;
-     border-radius: 10px;
-     height: 100%;
-    
+    border-radius: 10px;
+    height: 100%;   
+}
+.character-name::after{
+      content: '';
+    height: 50px;
+    width: 50px;
+    background-color: aliceblue;
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+     transform: translateZ(10vmin);
+    transform-style: preserve-3d;
 }
 .character-name img{
     height: 100%;
@@ -106,6 +114,7 @@ font-family: Harry Potter, Arial;
 }
 
 .bandera{
+  background-color: yellow;
     clip-path: polygon(0 0, 0 50%, 0 100%, 50% 70%, 100% 100%, 100% 49%, 100% 0);
     overflow:hiden;
     transition: all 1s ease;
@@ -147,6 +156,7 @@ font-family: Harry Potter, Arial;
     }
 }
 .bandera p{
+  background-color: green;
     color: black;
 }
 .bandera img{
@@ -154,21 +164,18 @@ font-family: Harry Potter, Arial;
     mix-blend-mode: multiply;
 }
 .meta-data{
+  color: white;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     border: solid white;
     padding:5px;
     grid-column: span 2 / span 2;
     grid-row: span 2 / span 2;
     grid-column-start: 2;
-    border-radius: 20px;
-    background-color: #80808085;
 }
-/* .btn-back a{  
- background-color: white;
-} */
+
 .btn-back {
     height: 50px;
     position: absolute;
@@ -176,3 +183,40 @@ font-family: Harry Potter, Arial;
     top: 0;
     margin: 20px;
 }
+
+    </style>
+</head>
+<body>
+    <conteiner>
+        <main>
+               <div class="bandera">
+               
+                <p> Hufflepuff</p>
+          </div>
+        <button class="btn-back">
+            
+         </button>
+        <header>
+         <h1>CEDRICK</h1>
+         </header>
+         
+        <div class="tarjeta-character">
+                <div  class="character-name">
+                    <img src='https://ik.imagekit.io/hpapi/cedric.png' />
+                </div>
+                </div>
+    
+        <div class="meta-data">
+            <p>Alternate Names: </p>
+            <p>Ancestry: </p>
+            <p>date Of Birth: </p>
+            <p>Eye Colour: </p>
+            <p>Gender: </p>
+            <p>Hair Colour: </p>
+            <p>wizard: </p>
+        
+        </div>
+        </main>
+        </conteiner>
+</body>
+</html>
