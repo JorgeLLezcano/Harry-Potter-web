@@ -1,12 +1,14 @@
 import { useParams, Link } from "react-router-dom";
 import './hojaDeEstilo/character.css'
+import Chargerts from "./Chargerts";
 
 export default function Character({ characters }) {
   const { id } = useParams();
   const character = characters[id];
 
   if (!character) {
-    return <div>Character not found</div>;
+    return <Chargerts/>
+    // return <div>Character not found</div>;
   }
 
   return (
