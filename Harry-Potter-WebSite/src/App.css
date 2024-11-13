@@ -51,13 +51,14 @@
   width: 100%;
   mask-image: linear-gradient(transparent, black 49%);
   display: block;
-  transform: translateY(300px) scale(0);
+  /* transform: translateY(300px) scale(0); */
   transition: transform .5s ease;
+  view-transition-name: card;
 }
 
-.card:hover img{
+/* .card:hover img{
   transform: translateY(0) scale(1);
-}
+} */
 
 @media screen and (max-width: 768px) {
   .back{
@@ -189,7 +190,7 @@
     mask-image: linear-gradient(transparent, black 49%);
   }
 }
-::view-transition-old(root),
+/* ::view-transition-old(root),
 ::view-transition-new(root) {
   animation-duration: 5.5s;
-}
+} */

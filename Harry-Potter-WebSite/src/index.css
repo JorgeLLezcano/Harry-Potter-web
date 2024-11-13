@@ -32,12 +32,10 @@ body {
   min-height: 100vh;
   font-family: Harry Potter, Arial;
   display: flex;
-    place-items: center;
-    justify-content: center;
-    align-items: center;
-    background-color: #333; 
-
-  
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #333; 
 }
 
 h1 {
@@ -76,4 +74,47 @@ button:focus-visible {
   /* button {
     background-color: #f9f9f9;
   } */
+}
+
+
+/* Añade estos estilos en tu archivo CSS para ajustar las transiciones si es necesario */
+@view-transition {
+  navigation: auto; /* enabled! */
+}
+:root {
+  --transition-duration: 0.1s;
+}
+
+img::view-transition-old, img::view-transition-new{
+  transition: all var(--transition-duration) ease-in-out, transform var(--transition-duration) ease-in-out;
+}
+
+img::view-transition-old {
+  opacity: 0;
+ 
+  animation-name: scaleOut; 
+}
+
+img::view-transition-new{
+   opacity: 1;
+ 
+   animation-name: scaleIn; 
+
+}
+@keyframes scaleIn {
+  from {
+    transform: translateX(100px) scale(0);
+  }
+  to {
+    transform: translateX(100px) scale(1);
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
 }

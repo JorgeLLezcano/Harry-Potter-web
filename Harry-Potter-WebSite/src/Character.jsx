@@ -1,8 +1,10 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate  } from "react-router-dom";
 import './hojaDeEstilo/character.css'
 import Chargerts from "./Chargerts";
+import './index.css'
 
 export default function Character({ characters }) {
+  const navigate = useNavigate();
   const { id } = useParams();
   const character = characters[id];
 
@@ -10,6 +12,13 @@ export default function Character({ characters }) {
     return <Chargerts/>
     // return <div>Character not found</div>;
   }
+  const handleBack = () => {
+    if (document.startViewTransition) {
+      document.startViewTransition(() => navigate('/'));
+    } else {
+      navigate('/');
+    }
+  };
 
   return (
 <conteiner>
@@ -38,9 +47,10 @@ export default function Character({ characters }) {
 
             > {character.house}</p>
       </div>
-    <button className="btn-back">
+    {/* <button className="btn-back">
         <Link to={'/'}> Back </Link>
-     </button>
+     </button> */}
+      <button className="btn-back" onClick={handleBack}>Back</button>
     <header>
      <h1>{character.name}</h1>
      </header>
