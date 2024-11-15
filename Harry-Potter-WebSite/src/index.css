@@ -36,6 +36,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #333; 
+  cursor: url('');
 }
 
 h1 {
@@ -81,26 +82,27 @@ button:focus-visible {
 @view-transition {
   navigation: auto; /* enabled! */
 }
+/* Añade estos estilos en tu archivo CSS para ajustar las transiciones si es necesario */
 :root {
-  --transition-duration: 0.1s;
+  --transition-duration: 1s;
 }
 
-img::view-transition-old, img::view-transition-new{
-  transition: all var(--transition-duration) ease-in-out, transform var(--transition-duration) ease-in-out;
+img::view-transition-old,
+img::view-transition-new {
+  transition: opacity var(--transition-duration) ease-in-out, transform var(--transition-duration) ease-in-out;
 }
 
 img::view-transition-old {
-  opacity: 0;
- 
-  animation-name: scaleOut; 
+  opacity: 1;
+  transform: scale(1); /* Estado inicial de la imagen antes de la transición */
 }
 
-img::view-transition-new{
-   opacity: 1;
- 
-   animation-name: scaleIn; 
-
+img::view-transition-new {
+  opacity: 1;
+  transform: scale(1.1); /* La imagen se agranda ligeramente en la nueva vista */
 }
+
+
 @keyframes scaleIn {
   from {
     transform: translateX(100px) scale(0);

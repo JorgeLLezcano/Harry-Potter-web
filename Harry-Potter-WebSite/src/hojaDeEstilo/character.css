@@ -76,7 +76,7 @@ font-family: Harry Potter, Arial;
     height: 100%;
     width:100%;
     transition: transform 1s ease;
-    animation: move 10s linear infinite;
+    /* animation: move 10s linear infinite; */
     border-image: fill 0 linear-gradient(#0001, #000);
    
 }

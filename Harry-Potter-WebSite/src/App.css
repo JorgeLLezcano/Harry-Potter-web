@@ -194,3 +194,44 @@
 ::view-transition-new(root) {
   animation-duration: 5.5s;
 } */
+
+
+@view-transition {
+  navigation: auto; /* enabled! */
+}
+:root {
+  --transition-duration: 1s;
+}
+
+img::view-transition-old,
+img::view-transition-new {
+  transition: opacity var(--transition-duration) ease-in-out, transform var(--transition-duration) ease-in-out;
+}
+
+img::view-transition-old {
+  opacity: 1;
+  transform: scale(1); /* Estado inicial de la imagen antes de la transición */
+}
+
+img::view-transition-new {
+  opacity: 1;
+  transform: scale(1.1); /* La imagen se agranda ligeramente en la nueva vista */
+}
+
+@keyframes scaleIn {
+  from {
+    transform: translateX(100px) scale(0);
+  }
+  to {
+    transform: translateX(100px) scale(1);
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
